@@ -1,0 +1,29 @@
+Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-231, 231 - 1], then return 0
+Assume the environment does not allow you to store 64-bit integers (signed or unsigned).
+
+I am also just going to assume I shouldnt use double types for the prob as well to make it harder and more of an opprotunity to learn.
+ 
+
+Example 1:
+
+Input: x = 123
+Output: 321
+Example 2:
+
+Input: x = -123
+Output: -321
+Example 3:
+
+Input: x = 120
+Output: 21
+ 
+
+Constraints:
+
+-231 <= x <= 231 - 1
+
+Insights:
+
+Make sure you test all teh obvious edge cases. like the max val, the min val, zero.
+When thinking about the logic for the problem, If you are on the right track, and you get errors, you are probably good to stay on teh same path. you dont need to completely pivot
+Getting sleep then coming back to teh problem fresh actually helps. I solved the prob much faster by sleeping and coming back thatn if i were to just try to grind it out. 

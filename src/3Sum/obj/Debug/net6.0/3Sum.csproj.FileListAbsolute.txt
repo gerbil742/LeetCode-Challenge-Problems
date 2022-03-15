@@ -1,0 +1,15 @@
+C:\Users\jycam\OneDrive\Documents\Projects-DESKTOP-CC563GG\Leetcode Probs\leetcode-probs\src\3Sum\bin\Debug\net6.0\3Sum.exe
+C:\Users\jycam\OneDrive\Documents\Projects-DESKTOP-CC563GG\Leetcode Probs\leetcode-probs\src\3Sum\bin\Debug\net6.0\3Sum.deps.json
+C:\Users\jycam\OneDrive\Documents\Projects-DESKTOP-CC563GG\Leetcode Probs\leetcode-probs\src\3Sum\bin\Debug\net6.0\3Sum.runtimeconfig.json
+C:\Users\jycam\OneDrive\Documents\Projects-DESKTOP-CC563GG\Leetcode Probs\leetcode-probs\src\3Sum\bin\Debug\net6.0\3Sum.dll
+C:\Users\jycam\OneDrive\Documents\Projects-DESKTOP-CC563GG\Leetcode Probs\leetcode-probs\src\3Sum\bin\Debug\net6.0\3Sum.pdb
+C:\Users\jycam\OneDrive\Documents\Projects-DESKTOP-CC563GG\Leetcode Probs\leetcode-probs\src\3Sum\obj\Debug\net6.0\3Sum.csproj.AssemblyReference.cache
+C:\Users\jycam\OneDrive\Documents\Projects-DESKTOP-CC563GG\Leetcode Probs\leetcode-probs\src\3Sum\obj\Debug\net6.0\3Sum.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jycam\OneDrive\Documents\Projects-DESKTOP-CC563GG\Leetcode Probs\leetcode-probs\src\3Sum\obj\Debug\net6.0\3Sum.AssemblyInfoInputs.cache
+C:\Users\jycam\OneDrive\Documents\Projects-DESKTOP-CC563GG\Leetcode Probs\leetcode-probs\src\3Sum\obj\Debug\net6.0\3Sum.AssemblyInfo.cs
+C:\Users\jycam\OneDrive\Documents\Projects-DESKTOP-CC563GG\Leetcode Probs\leetcode-probs\src\3Sum\obj\Debug\net6.0\3Sum.csproj.CoreCompileInputs.cache
+C:\Users\jycam\OneDrive\Documents\Projects-DESKTOP-CC563GG\Leetcode Probs\leetcode-probs\src\3Sum\obj\Debug\net6.0\3Sum.dll
+C:\Users\jycam\OneDrive\Documents\Projects-DESKTOP-CC563GG\Leetcode Probs\leetcode-probs\src\3Sum\obj\Debug\net6.0\refint\3Sum.dll
+C:\Users\jycam\OneDrive\Documents\Projects-DESKTOP-CC563GG\Leetcode Probs\leetcode-probs\src\3Sum\obj\Debug\net6.0\3Sum.pdb
+C:\Users\jycam\OneDrive\Documents\Projects-DESKTOP-CC563GG\Leetcode Probs\leetcode-probs\src\3Sum\obj\Debug\net6.0\3Sum.genruntimeconfig.cache
+C:\Users\jycam\OneDrive\Documents\Projects-DESKTOP-CC563GG\Leetcode Probs\leetcode-probs\src\3Sum\obj\Debug\net6.0\ref\3Sum.dll

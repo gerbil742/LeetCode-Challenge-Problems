@@ -1,6 +1,6 @@
 using Xunit;
 using System.Collections.Generic;
-using System.Linq;
+using System;
 using FluentAssertions;
 
 namespace ThreeSum.Tests;
@@ -19,6 +19,8 @@ public class UnitTest1
 
     value1.Should().BeEquivalentTo(expected1);
   }
+
+  [Fact]
   public void Test2()
   {
     int[] input1 = { 0 };
@@ -30,6 +32,7 @@ public class UnitTest1
     value1.Should().BeEquivalentTo(expected1);
   }
 
+  [Fact]
   public void Test3()
   {
     int[] input1 = { };
@@ -41,6 +44,7 @@ public class UnitTest1
     value1.Should().BeEquivalentTo(expected1);
   }
 
+  [Fact]
   public void Test4()
   {
     int[] input1 = { -4, 4, 4, 4, 4, -8, 0 };

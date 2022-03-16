@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jycam\\OneDrive\\Documents\\Projects-DESKTOP-CC563GG\\Leetcode Probs\\leetcode-probs\\src\\3Sum\\3Sum.csproj": {}
+    "C:\\Users\\jycam\\OneDrive\\Documents\\Projects-DESKTOP-CC563GG\\Leetcode Probs\\leetcode-probs\\src\\combinationsum\\combinationsum.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jycam\\OneDrive\\Documents\\Projects-DESKTOP-CC563GG\\Leetcode Probs\\leetcode-probs\\src\\3Sum\\3Sum.csproj": {
+    "C:\\Users\\jycam\\OneDrive\\Documents\\Projects-DESKTOP-CC563GG\\Leetcode Probs\\leetcode-probs\\src\\combinationsum\\combinationsum.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jycam\\OneDrive\\Documents\\Projects-DESKTOP-CC563GG\\Leetcode Probs\\leetcode-probs\\src\\3Sum\\3Sum.csproj",
-        "projectName": "3Sum",
-        "projectPath": "C:\\Users\\jycam\\OneDrive\\Documents\\Projects-DESKTOP-CC563GG\\Leetcode Probs\\leetcode-probs\\src\\3Sum\\3Sum.csproj",
+        "projectUniqueName": "C:\\Users\\jycam\\OneDrive\\Documents\\Projects-DESKTOP-CC563GG\\Leetcode Probs\\leetcode-probs\\src\\combinationsum\\combinationsum.csproj",
+        "projectName": "combinationsum",
+        "projectPath": "C:\\Users\\jycam\\OneDrive\\Documents\\Projects-DESKTOP-CC563GG\\Leetcode Probs\\leetcode-probs\\src\\combinationsum\\combinationsum.csproj",
         "packagesPath": "C:\\Users\\jycam\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jycam\\OneDrive\\Documents\\Projects-DESKTOP-CC563GG\\Leetcode Probs\\leetcode-probs\\src\\3Sum\\obj\\",
+        "outputPath": "C:\\Users\\jycam\\OneDrive\\Documents\\Projects-DESKTOP-CC563GG\\Leetcode Probs\\leetcode-probs\\src\\combinationsum\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jycam\\AppData\\Roaming\\NuGet\\NuGet.Config",

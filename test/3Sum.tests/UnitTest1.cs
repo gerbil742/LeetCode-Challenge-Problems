@@ -1,6 +1,5 @@
 using Xunit;
 using System.Collections.Generic;
-using System;
 using FluentAssertions;
 
 namespace ThreeSum.Tests;

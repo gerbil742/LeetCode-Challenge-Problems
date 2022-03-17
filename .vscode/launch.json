@@ -2,6 +2,17 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "CombinationSum Debugger",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/src/CombinationSum/bin/Debug/net6.0/combinationsum.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/src/CombinationSum",
+      "stopAtEntry": false,
+      "console": "internalConsole"
+    },
+    {
       "name": "3Sum Debugger",
       "type": "coreclr",
       "request": "launch",
@@ -27,12 +38,12 @@
       "cwd": "${workspaceFolder}/src/ReverseInt",
       // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
       "console": "internalConsole",
-      "stopAtEntry": false,
+      "stopAtEntry": false
     },
     {
       "name": ".NET Core Attach",
       "type": "coreclr",
       "request": "attach"
     }
-  ]  
+  ]
 }

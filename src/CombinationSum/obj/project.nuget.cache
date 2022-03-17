@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QvS5lt+SLmFwX2tFu2XqBuKBZduSbr/6H2YPR5sxRwGwy94JH8IJcjuN07stZmjj91z/bLPgSMkcL3/ITUBy0w==",
+  "dgSpecHash": "N5yOJZIO+xmqnKcyJWDznkKQJGKTulO8rPvQnHqjqcKGgM4vhu9Q4/kYxs1aNr8AtfD76oheTDQrfpyWUj1LOQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jycam\\OneDrive\\Documents\\Projects-DESKTOP-CC563GG\\Leetcode Probs\\leetcode-probs\\src\\combinationsum\\combinationsum.csproj",
+  "projectFilePath": "C:\\Users\\jycam\\OneDrive\\Documents\\Projects-DESKTOP-CC563GG\\Leetcode Probs\\leetcode-probs\\src\\combinationSum\\CombinationSum.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

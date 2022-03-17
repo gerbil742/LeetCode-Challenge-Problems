@@ -17,13 +17,6 @@ public class Solution
       numberAndIndex[nums[i]] = i;
     }
 
-    // loop through input array 3 times. if the cur index is the same as any of the others then go to the next val. 
-    // calc the sum = 0; if good then make new array and add it to teh list
-    // verify no duplicates. put candidate into a set. see if the candidate 
-    // to verify, take our candidate, check first element against every list in the results. if there is a match in one, then check the 2nd element againse all
-    // of those elements, same for thrid. 
-    // use Sets? take candidate and each of the existing trips check if candidate.setequals other trips. if so dont add it. 
-
     for (int i = 0; i < nums.Length; i++)
     {
       for (int j = i + 1; j < nums.Length; j++)

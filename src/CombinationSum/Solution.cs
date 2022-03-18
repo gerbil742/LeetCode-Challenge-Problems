@@ -11,28 +11,20 @@ public class Solution
     // this is a binary tree. travle down the tree trace the patch and return the path
     // on 2. checkSum( 2, 3, 6, 7) -> 6 and 7 will bust
 
-    //int multiplicand = 0;
-    //int multiplier = 0;
     IList<IList<int>> result = new List<IList<int>>();
-
-    List<List<int>> possibleMultiplicands = findMultiplicands(candidates, target);
-    //System.Console.WriteLine(string.Join("\n", possibleMultiplicands.ToArray()));
+    List<List<int>> possibleMultiplicands = FindMultiplicands(candidates, target);
 
     // Find the total amount of possible combinations of indexes on which to check for a correct combination
-    int numOfPossibleIndexes = 1;
-    foreach (List<int> multiplicandList in possibleMultiplicands)
-    {
-      numOfPossibleIndexes *= multiplicandList.Count;
-    }
+    List<Node> tree = CreateTree(possibleMultiplicands);
+    List<List<int>> allPossibleMultiplesOfCandidates = FindAllPossiblePaths(tree, target);
 
-
-    // find potential multiplicands for each of the candidates
-
+    result = CreateFinalResult(candidates, allPossibleMultiplesOfCandidates);
 
     return result;
   }
 
-  private static List<List<int>> findMultiplicands(int[] candidates, int target)
+  // Find all the possible ways we can multiple each input in candidates to potentiall reach the target. 
+  public static List<List<int>> FindMultiplicands(int[] candidates, int target)
   {
     List<int> multiplicands;
     List<List<int>> possibleMultiplicands = new List<List<int>>();
@@ -42,7 +34,7 @@ public class Solution
       multiplicands = new List<int> { 0 };
       for (int i = 1; candidate * i <= target; i++)
       {
-        if (candidate * i <= target) multiplicands.Add(i);
+        if (candidate * i <= target) multiplicands.Add(i * candidate);
       }
 
       possibleMultiplicands.Add(multiplicands);
@@ -51,83 +43,113 @@ public class Solution
     return possibleMultiplicands;
   }
 
-  // When calculating the table of all potential indicies indexes, we need to know what number to modulus to know when to flip the bit of the number
-  private static int[] calculateBitFlippers(List<List<int>> multiplicandList)
+  public static List<Node> CreateTree(List<List<int>> valuesLists)
   {
-    int[] flippers = new int[multiplicandList.Count - 1];
-
-    for (int i = 1; i < multiplicandList.Count; i++)
-    {
-      flippers[i - 1] = multiplicandList[i].Count;
-    }
-
-    return flippers;
-  }
-
-  private static List<List<int>> createIndiciesTable(List<List<int>> multiplicandList)
-  {
-    List<List<int>> indiciesList = new List<List<int>>();
-    List<int> bitFlippers = new List<int>(); // {12, 4, 2, 1}
-    List<int> indicies = new List<int> { 0, 0, 0, 0 };
-
-    // pass in array size for the table
-
-    int arraySize = 48;
-
-    for (int i = 0; i < arraySize; i++)
-    {
-
-
-    }
-
-    return indiciesList;
-  }
-
-  private static List<Node> CreateTree(List<List<int>> valuesLists)
-  {
-    List<Nodes> newNodes = new List<Node>();
+    List<Node> newNodes = new List<Node>();
     List<int> currentValuesList = valuesLists[0];
 
-    for (int i = 0; i < currentValues.Count; i++)
+    for (int i = 0; i < currentValuesList.Count; i++)
     {
       newNodes.Add(new Node(currentValuesList[i]));
     }
 
-    List<List<int>> nextValuesLists = valuesLists.Remove(0);
+    List<List<int>> nextValuesLists = new List<List<int>>(valuesLists);
+    nextValuesLists.RemoveAt(0);
 
     if (nextValuesLists.Count != 0)
     {
       foreach (Node node in newNodes)
       {
-        node.setNeighbors(CreateTree(nextValuesLists));
+        node.SetNeighbors(CreateTree(nextValuesLists));
       }
     }
 
     return newNodes;
   }
 
-  private static List<Node> CreateNodeNeighbors(List<int> multiplicands)
+  public static List<List<int>> FindPathsForCurrentNode(Node currentNode, int target, List<int> path, int sum)
   {
+    //List<List<int>> successfulPaths = new List<List<int>>();
+    // coppy the current path and add the current node; 
+    List<int> newPath = new List<int>(path);
+    List<List<int>> successfulPaths = new List<List<int>>();
+    newPath.Add(currentNode.Value);
+    sum += currentNode.Value;
 
+    if (sum > target)
+    {
+      return successfulPaths;
+    }
+    else if (currentNode.Neighbors.Count == 0 && sum == target)
+    {
+      successfulPaths.Add(newPath);
+    }
+
+    foreach (Node node in currentNode.Neighbors)
+    {
+      successfulPaths.AddRange(FindPathsForCurrentNode(node, target, newPath, sum));
+    }
+
+    return successfulPaths;
+  }
+
+  public static List<List<int>> FindAllPossiblePaths(List<Node> tree, int target)
+  {
+    List<List<int>> successfulPaths = new List<List<int>>();
+
+    foreach (Node node in tree)
+    {
+      List<List<int>> paths = FindPathsForCurrentNode(node, target, new List<int>(), 0);
+      foreach (List<int> path in paths)
+      {
+        successfulPaths.Add(path);
+      }
+    }
+
+    return successfulPaths;
+  }
+
+  public static IList<IList<int>> CreateFinalResult(int[] candidates, List<List<int>> candidateMultiples)
+  {
+    IList<IList<int>> result = new List<IList<int>>();
+    List<int> resultRow;
+
+    foreach (List<int> multiples in candidateMultiples)
+    {
+      resultRow = new List<int>();
+      for (int candidateIndex = 0; candidateIndex < multiples.Count; candidateIndex++)
+      {
+        // add candidate to the output x amount of times where x is the number for multiple;
+        int timesAddingCandidate = multiples[candidateIndex] / candidates[candidateIndex];
+        for (int index = 0; index < timesAddingCandidate; index++)
+        {
+          resultRow.Add(candidates[candidateIndex]);
+        }
+      }
+
+      result.Add(resultRow);
+    }
+
+    return result;
   }
 }
 
 public class Node
 {
-  public int value { get; private set; }
-  public List<Node> neighbors { get; }
+  public int Value { get; private set; }
+  public List<Node> Neighbors { get; }
 
   public Node(int val)
   {
-    value = val;
-    neighbors = new List<Node>();
+    Value = val;
+    Neighbors = new List<Node>();
   }
 
-  public void setNeighbors(List<Node> nodes)
+  public void SetNeighbors(List<Node> nodes)
   {
     foreach (Node node in nodes)
     {
-      neighbors.Add(node);
+      Neighbors.Add(node);
     }
   }
 }

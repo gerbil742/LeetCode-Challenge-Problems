@@ -4,12 +4,12 @@
     "C:\\Users\\jycam\\OneDrive\\Documents\\Projects-DESKTOP-CC563GG\\Leetcode Probs\\leetcode-probs\\test\\CombinationSum.tests\\CombinationSum.tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jycam\\OneDrive\\Documents\\Projects-DESKTOP-CC563GG\\Leetcode Probs\\leetcode-probs\\src\\CombinationSum\\combinationsum.csproj": {
+    "C:\\Users\\jycam\\OneDrive\\Documents\\Projects-DESKTOP-CC563GG\\Leetcode Probs\\leetcode-probs\\src\\CombinationSum\\CombinationSum.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jycam\\OneDrive\\Documents\\Projects-DESKTOP-CC563GG\\Leetcode Probs\\leetcode-probs\\src\\CombinationSum\\combinationsum.csproj",
-        "projectName": "combinationsum",
-        "projectPath": "C:\\Users\\jycam\\OneDrive\\Documents\\Projects-DESKTOP-CC563GG\\Leetcode Probs\\leetcode-probs\\src\\CombinationSum\\combinationsum.csproj",
+        "projectUniqueName": "C:\\Users\\jycam\\OneDrive\\Documents\\Projects-DESKTOP-CC563GG\\Leetcode Probs\\leetcode-probs\\src\\CombinationSum\\CombinationSum.csproj",
+        "projectName": "CombinationSum",
+        "projectPath": "C:\\Users\\jycam\\OneDrive\\Documents\\Projects-DESKTOP-CC563GG\\Leetcode Probs\\leetcode-probs\\src\\CombinationSum\\CombinationSum.csproj",
         "packagesPath": "C:\\Users\\jycam\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\jycam\\OneDrive\\Documents\\Projects-DESKTOP-CC563GG\\Leetcode Probs\\leetcode-probs\\src\\CombinationSum\\obj\\",
         "projectStyle": "PackageReference",
@@ -82,8 +82,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\jycam\\OneDrive\\Documents\\Projects-DESKTOP-CC563GG\\Leetcode Probs\\leetcode-probs\\src\\CombinationSum\\combinationsum.csproj": {
-                "projectPath": "C:\\Users\\jycam\\OneDrive\\Documents\\Projects-DESKTOP-CC563GG\\Leetcode Probs\\leetcode-probs\\src\\CombinationSum\\combinationsum.csproj"
+              "C:\\Users\\jycam\\OneDrive\\Documents\\Projects-DESKTOP-CC563GG\\Leetcode Probs\\leetcode-probs\\src\\CombinationSum\\CombinationSum.csproj": {
+                "projectPath": "C:\\Users\\jycam\\OneDrive\\Documents\\Projects-DESKTOP-CC563GG\\Leetcode Probs\\leetcode-probs\\src\\CombinationSum\\CombinationSum.csproj"
               }
             }
           }

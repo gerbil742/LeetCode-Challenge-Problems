@@ -23,7 +23,7 @@ public class UnitTest1
   {
     int target = 8;
     int[] candidates = new int[] { 2, 3, 5 };
-    List<List<int>> expected = new List<List<int>> { new List<int> { 2, 2, 2, 2 }, new List<int> { 7 }, new List<int> { 2, 3, 3 }, new List<int> { 3, 5 } };
+    List<List<int>> expected = new List<List<int>> { new List<int> { 2, 2, 2, 2 }, new List<int> { 2, 3, 3 }, new List<int> { 3, 5 } };
 
     IList<IList<int>> result = Solution.CombinationSum(candidates, target);
 

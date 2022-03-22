@@ -8,11 +8,8 @@ public class Solution2
   {
     IList<IList<int>> result = new List<IList<int>>();
 
-    // valid state. when the sum of teh state is = to target. 
-    // state. a list of multiples of candidates. 
-    // candidate a number we want to add to our state. 
     List<int> sortedCandidates = new List<int>(candidates);
-    sortedCandidates.Sort();
+    sortedCandidates.Sort(); // sorting the array is important for our algorithim to work. Will allow for faster solution
 
     findAllCombinations(result, new List<int>(), target, sortedCandidates);
 
@@ -29,7 +26,10 @@ public class Solution2
 
       if (combination.Sum() > target)
       {
+        // combination is passed by reference, so remove the bad candidate from the combination to try the one at the next index. 
         combination.RemoveAt(combination.Count - 1);
+
+        // if Sum(combination + current candidate) >= target, we dont need to check teh remaining combinations for that candidate since we sorted the array. 
         return;
       }
 
@@ -37,11 +37,16 @@ public class Solution2
       {
         solutions.Add(new List<int>(combination));
 
-        combination.RemoveAt(combination.Count - 1); // reset candidates for when we return back to origional stack
+        combination.RemoveAt(combination.Count - 1);
         return;
       }
 
+      // if the sum is not yet >= target, Recursive call to findAllCombos(). this will take the current combination of candidates and adds
+      // whatever the current index of canditates is to the list. This will keep happening until the total busts or hits the target.  
       findAllCombinations(solutions, combination, target, candidates.GetRange(index, candidates.Count - index));
+
+      // the current candidate (num) didn't find any good combinations (didn't get to a return statement) 
+      // so remove it from teh list of combinationions and iterate to teh next candidate
       combination.RemoveAt(combination.Count - 1);
     }
   }

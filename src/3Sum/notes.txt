@@ -22,3 +22,11 @@ Constraints:
 
 0 <= nums.length <= 3000
 -105 <= nums[i] <= 105
+
+FROM THIS WE LEARNED TO JUST AVOID PROCCESSING DUPLICATE DATA. if you process data that results in a duplicate, dont jsut go in after and remove teh duplicates from the list, 
+AVOID it in the first place
+
+also we learned that i need to try to figure out if we are going to need to check every piece of data with each other piece of data O(N^2) first. Don't try to circumvent this if 
+you are going to end up needint to in the end. 
+
+Also remeber to sort the list before you process if you are going to need to loop through all the data. 
